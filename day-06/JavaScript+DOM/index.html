@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First JS Page</title>
+</head>
+<body>
+    <h1 id="title">Hello World</h1>
+    <button id="btn">Click Me</button>
+    <script>
+        const heading = document.getElementById("title");
+        const button = document.getElementById("btn");
+
+        button.addEventListener("click", function () {
+            heading.textContent = "Button Clicked!";
+        });
+    </script>
+</body>
+</html>
