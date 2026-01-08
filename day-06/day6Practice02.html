@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice Task 02 Day 06</title>
+    </head>
+    <body>
+        <p id="task">Count : 0</p>
+        <button id="btn">Click hear</button>
+
+        <script>
+            const para = document.getElementById('task');
+            const button = document.getElementById("btn");
+
+            let count = 0;
+
+
+            button.addEventListener("click", function() {
+                count = count + 1;
+                para.textContent = "Count : "+ count;
+                
+            });
+        </script>
+    </body>
+</html>

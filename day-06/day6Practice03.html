@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice Task 03 Day 06</title>
+    </head>
+    <body>
+        <h2 id="status">Practice Task</h2>
+        <button id="btn1">Click Hear for Red</button>
+        <button id="btn2">Click Hear for Blue</button>
+
+        <script>
+            const heading = document.getElementById('status');
+            const redBtn = document.getElementById("btn1");
+            const blueBtn = document.getElementById("btn2");
+
+            redBtn.addEventListener("click", function() {
+                heading.style.color = "red";
+            });
+
+            blueBtn.addEventListener("click", function() {
+                heading.style.color = "blue";
+            });
+        </script>
+    </body>
+</html>

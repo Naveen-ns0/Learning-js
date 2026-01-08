@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice Task 01 Day 06</title>
+    </head>
+    <body>
+        <h2 id="status">Activate</h2>
+        <button id="checkBtn">Click Hear to Activate</button>
+
+        <script>
+            const heading = document.getElementById('status');
+            const button = document.getElementById("checkBtn");
+
+            console.log(heading);
+
+            button.addEventListener("click", function() {
+                heading.textContent = "System Active";
+            });
+        </script>
+    </body>
+</html>
