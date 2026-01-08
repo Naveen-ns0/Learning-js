@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice Task 01 Day 07</title>
+    </head>
+    <body>
+        <h2 id="text">Waiting...</h2>
+        <button id="btn">Activate</button>
+
+
+        <script>
+            const heading = document.getElementById('text');
+            const btn = document.getElementById("btn");
+            function changetext() {
+            heading.textContent = 'Activated!';
+            }
+            btn.addEventListener("click",changetext);
+        </script>
+    </body>
+</html>
