@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice Task 02 Day 07</title>
+    </head>
+    <body>
+        <h2 id="text">Waiting...</h2>
+        <button id="btn">Activate</button>
+
+
+        <script>
+            const heading = document.getElementById('text');
+            const btn = document.getElementById("btn");
+            
+            function changetext() {
+            heading.textContent = 'Clicked!';
+            }
+            
+            function hover() {
+            btn.textContent = 'Mouse over';
+            }
+            
+            btn.addEventListener("mouseenter",hover);
+            btn.addEventListener("click",changetext);
+        </script>
+    </body>
+</html>
