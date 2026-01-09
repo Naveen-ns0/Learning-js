@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task 01 Day 09</title>
+    </head>
+    <body>
+        <h2 id="status">Status : OFF</h2>
+        <button id="btn">Activate</button>
+
+
+        <script>
+            const heading = document.getElementById('status');
+            const btn = document.getElementById("btn");
+            
+            let isActive = false;
+
+            btn.addEventListener("click",function(){
+                if (isActive===false){
+                    heading.textContent = "Status : ON";
+                    btn.textContent = "Deactivate";
+                    heading.style.color = "green";
+                    isActive = true;
+                }else{
+                    heading.textContent = "Status : OFF";
+                    btn.textContent = "Activate";
+                    heading.style.color = "red";
+                    isActive = false;
+                }
+            })
+            
+        </script>
+    </body>
+</html>
