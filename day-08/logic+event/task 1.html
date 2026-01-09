@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice Task 01 Day 08</title>
+    </head>
+    <body>
+        <h2 id="status">Status : OFF</h2>
+        <button id="btn">Activate</button>
+
+
+        <script>
+            const heading = document.getElementById('status');
+            const btn = document.getElementById("btn");
+            
+            let isActive = false;
+
+            btn.addEventListener("click",function(){
+                if (isActive===false){
+                    heading.textContent = "Status : ON";
+                    isActive = true;
+                }else{
+                    heading.textContent = "Status : OFF";
+                    isActive = false;
+                }
+            })
+            
+        </script>
+    </body>
+</html>
