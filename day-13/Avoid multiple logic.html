@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day 13 task 01</title>
+    <style>
+        .on { color: green; }
+        .off { color: red; }
+
+        .btn-on {
+            background-color: green;
+            color: white;
+        }
+        .btn-off {
+            background-color: gray;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h2 class="status off">Status: OFF</h2>
+    <button class="toggle-btn" data-state="off">Activate</button>
+
+    <h2 class="status off">Status: OFF</h2>
+    <button class="toggle-btn" data-state="off">Activate</button>
+
+    <h2 class="status off">Status: OFF</h2>
+    <button class="toggle-btn" data-state="off">Activate</button>
+
+    <script>
+        const buttons = document.querySelectorAll(".toggle-btn");
+
+        buttons.forEach(btn => {
+            btn.addEventListener("click", function () {
+
+                const heading = btn.previousElementSibling;
+
+                if (btn.dataset.state === "off") {
+                    btn.dataset.state = "on";
+
+                    heading.textContent = "Status: ON";
+                    btn.textContent = "Deactivate";
+
+                    heading.classList.remove("off");
+                    heading.classList.add("on");
+
+                    btn.classList.remove("btn-off");
+                    btn.classList.add("btn-on");
+
+                } else {
+                    btn.dataset.state = "off";
+
+                    heading.textContent = "Status: OFF";
+                    btn.textContent = "Activate";
+
+                    heading.classList.remove("on");
+                    heading.classList.add("off");
+
+                    btn.classList.remove("btn-on");
+                    btn.classList.add("btn-off");
+                }
+            });
+        });
+        </script>
+
+
+</body>
+</html>
