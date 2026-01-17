@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Day 11 task 1</title>
+    <style>
+        .on {
+            color: green;
+        }
+
+        .off {
+            color: red;
+        }
+
+        .btn-on {
+            background-color: green;
+            color: white;
+        }
+
+        .btn-off {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 id="status" class="off">Status: OFF</h2>
+    <button id="btn" class="btn-off">Activate</button>
+
+    <script>
+        const heading = document.getElementById("status");
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", function () {
+                heading.classList.toggle("on");
+                btn.classList.toggle("btn-on");
+
+                if (heading.classList.contains("on")) {
+                    heading.classList.remove("off");
+                    btn.classList.remove("btn-off");
+                    heading.textContent = "Status: ON";
+                    btn.textContent = "Deactivate";
+                }else{
+                    heading.classList.add("off");
+                    btn.classList.add("btn-off");
+                    heading.textContent = "Status: OFF";
+                    btn.textContent = "Activate";
+                }
+        });
+
+    </script>
+</body>
+
+</html>
