@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Day 12 task 1</title>
+    <style>
+        .on {
+            color: green;
+        }
+
+        .off {
+            color: red;
+        }
+
+        .btn-on {
+            background-color: green;
+            color: white;
+        }
+
+        .btn-off {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 id="status" class="off">Status: OFF</h2>
+    <button id="btn" data-state = "off" class="btn-off">Activate</button>
+
+    <script>
+        const heading = document.getElementById("status");
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", function () {
+                if (btn.dataset.state === "off") {
+                btn.dataset.state = "on";
+
+                heading.textContent = "Status: ON";
+                btn.textContent = "Deactivate";
+
+                heading.classList.remove("off");
+                heading.classList.add("on");
+
+                btn.classList.remove("btn-off");
+                btn.classList.add("btn-on");
+
+            } else {
+                btn.dataset.state = "off";
+
+                heading.textContent = "Status: OFF";
+                btn.textContent = "Activate";
+
+                heading.classList.remove("on");
+                heading.classList.add("off");
+
+                btn.classList.remove("btn-on");
+                btn.classList.add("btn-off");
+            }
+        });
+
+    </script>
+</body>
+
+</html>
